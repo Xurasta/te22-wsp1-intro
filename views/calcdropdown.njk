@@ -1,0 +1,19 @@
+{% extends "layout.njk" %}
+{% block content %}
+<main class="container">
+    <h1>{{title}}</h1>
+    <form action="/calc/dropdown" method="get">
+        <input type="number" name="V1" placeholder="Waiting for value" value="{{number1}}">
+        <input type="number" name="V2" placeholder="Waiting for value" value="{{number2}}">
+
+        <select name="select">
+            <option value="add">add</option>
+            <option value="multiply">multiply</option>
+            <option value="subtract">subtract</option>
+            <option value="divide">divide</option>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+    <p>{{ sum }}</p>
+</main>
+{% endblock %}
